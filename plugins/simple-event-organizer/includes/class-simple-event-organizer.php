@@ -2,7 +2,7 @@
 /**
  * Contains class for the plugin.
  *
- * @package Simple Event Directory \ Main
+ * @package Simple Event Organizer \ Main
  * @author Carl Alberto
  * @since 1.0.0
  */
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class used for the main plugin functions.
  */
-class Simple_Event_Directory {
+class Simple_Event_Organizer {
 
 	/**
 	 * Constructor function.
@@ -28,7 +28,7 @@ class Simple_Event_Directory {
 	 */
 	public function __construct( $file = '', $version = '1.0.0', $pluginoptions = array() ) {
 		$this->_version = $version;
-		$this->_token = 'simple_event_directory';
+		$this->_token = 'simple_event_organizer';
 		$this->base = $pluginoptions['settings_prefix'];
 
 		// Load plugin environment variables.
@@ -53,10 +53,10 @@ class Simple_Event_Directory {
 
 		// Load API for generic admin functions.
 		if ( is_admin() ) {
-			$this->admin = new Simple_Event_Directory_Admin_API();
+			$this->admin = new Simple_Event_Organizer_Admin_API();
 		}
 // @codingStandardsIgnoreFile
-//		$custom = new Simple_Event_Directory_Main;
+//		$custom = new Simple_Event_Organizer_Main;
 //		$custom->register_taxonomy1();
 //		$custom->register_cpt1();
 
@@ -66,7 +66,7 @@ class Simple_Event_Directory {
 	} // End __construct ()
 
 	/**
-	 * The single instance of Simple_Event_Directory.
+	 * The single instance of Simple_Event_Organizer.
 	 *
 	 * @var 	object
 	 * @access  private
@@ -213,7 +213,7 @@ class Simple_Event_Directory {
 	 * @return  void
 	 */
 	public function load_localisation() {
-		load_plugin_textdomain( 'simple-event-directory', false, dirname( plugin_basename( $this->file ) ) . '/languages/' );
+		load_plugin_textdomain( 'simple-event-organizer', false, dirname( plugin_basename( $this->file ) ) . '/languages/' );
 	} // End load_localisation ()
 
 	/**
@@ -224,7 +224,7 @@ class Simple_Event_Directory {
 	 * @return  void
 	 */
 	public function load_plugin_textdomain() {
-	    $domain = 'simple-event-directory';
+	    $domain = 'simple-event-organizer';
 
 	    $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 
@@ -233,17 +233,17 @@ class Simple_Event_Directory {
 	} // End load_plugin_textdomain ()
 
 	/**
-	 * Main Simple_Event_Directory Instance.
+	 * Main Simple_Event_Organizer Instance.
 	 *
-	 * Ensures only one instance of Simple_Event_Directory is loaded or can be loaded.
+	 * Ensures only one instance of Simple_Event_Organizer is loaded or can be loaded.
 	 *
 	 * @since 1.0.0
 	 * @static
-	 * @see Simple_Event_Directory()
+	 * @see Simple_Event_Organizer()
 	 * @param string $file Name of this file.
 	 * @param string $version Version of this plugin.
 	 * @param array  $pluginoptions Contains various options for the plugin.
-	 * @return Main Simple_Event_Directory instance
+	 * @return Main Simple_Event_Organizer instance
 	 */
 	public static function instance( $file = '', $version = '1.0.0', $pluginoptions = array() ) {
 		if ( is_null( self::$_instance ) ) {
@@ -258,7 +258,7 @@ class Simple_Event_Directory {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'simple-event-directory' ), esc_html( $this->parent->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'simple-event-organizer' ), esc_html( $this->parent->_version ) );
 	} // End __clone ()
 
 	/**
@@ -267,7 +267,7 @@ class Simple_Event_Directory {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'simple-event-directory' ), esc_html( $this->parent->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'simple-event-organizer' ), esc_html( $this->parent->_version ) );
 	} // End __wakeup ()
 
 	/**

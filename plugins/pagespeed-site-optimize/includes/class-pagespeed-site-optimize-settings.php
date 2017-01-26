@@ -2,7 +2,7 @@
 /**
  * Contains class for the settings.
  *
- * @package Simple Event Organizer \ Settings
+ * @package Pagespeed Site Optimize \ Settings
  * @author Carl Alberto
  * @since 1.0.0
  */
@@ -14,10 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class used for the plugin setting.
  */
-class Simple_Event_Organizer_Settings {
+class Pagespeed_Site_Optimize_Settings {
 
 	/**
-	 * The single instance of Simple_Event_Organizer_Settings.
+	 * The single instance of Pagespeed_Site_Optimize_Settings.
 	 *
 	 * @var 	object
 	 * @access  private
@@ -91,7 +91,7 @@ class Simple_Event_Organizer_Settings {
 	 * @return void
 	 */
 	public function add_menu_item() {
-		$page = add_options_page( __( 'Simple Event Organizer Settings', 'simple-event-organizer' ) , __( 'Simple Event Organizer Settings', 'simple-event-organizer' ) , 'manage_options' , $this->parent->_token . '_settings' ,  array( $this, 'settings_page' ) );
+		$page = add_options_page( __( 'Pagespeed Site Optimize Settings', 'pagespeed-site-optimize' ) , __( 'Pagespeed Site Optimize Settings', 'pagespeed-site-optimize' ) , 'manage_options' , $this->parent->_token . '_settings' ,  array( $this, 'settings_page' ) );
 		add_action( 'admin_print_styles-' . $page, array( $this, 'settings_assets' ) );
 	}
 
@@ -122,7 +122,7 @@ class Simple_Event_Organizer_Settings {
 	 * @return array 		Modified links
 	 */
 	public function add_settings_link( $links ) {
-		$settings_link = '<a href="options-general.php?page=' . $this->parent->_token . '_settings">' . __( 'Settings', 'simple-event-organizer' ) . '</a>';
+		$settings_link = '<a href="options-general.php?page=' . $this->parent->_token . '_settings">' . __( 'Settings', 'pagespeed-site-optimize' ) . '</a>';
 		array_push( $links, $settings_link );
 		return $links;
 	}
@@ -135,75 +135,75 @@ class Simple_Event_Organizer_Settings {
 	private function settings_fields() {
 
 		$settings['standard'] = array(
-			'title'					=> __( 'Standard', 'simple-event-organizer' ),
-			'description'			=> __( 'These are fairly standard form input fields.', 'simple-event-organizer' ),
+			'title'					=> __( 'Standard', 'pagespeed-site-optimize' ),
+			'description'			=> __( 'These are fairly standard form input fields.', 'pagespeed-site-optimize' ),
 			'fields'				=> array(
 				array(
 					'id' 			=> 'cb_reset',
-					'label'			=> __( 'Reset All when deactivated', 'simple-event-organizer' ),
-					'description'	=> __( 'Reset All when deactivated', 'simple-event-organizer' ),
+					'label'			=> __( 'Reset All when deactivated', 'pagespeed-site-optimize' ),
+					'description'	=> __( 'Reset All when deactivated', 'pagespeed-site-optimize' ),
 					'type'			=> 'checkbox',
 					'default'		=> '',
 				),
 				array(
 					'id' 			=> 'text_field',
-					'label'			=> __( 'Some Text' , 'simple-event-organizer' ),
-					'description'	=> __( 'This is a standard text field.', 'simple-event-organizer' ),
+					'label'			=> __( 'Some Text' , 'pagespeed-site-optimize' ),
+					'description'	=> __( 'This is a standard text field.', 'pagespeed-site-optimize' ),
 					'type'			=> 'text',
 					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text', 'simple-event-organizer' ),
+					'placeholder'	=> __( 'Placeholder text', 'pagespeed-site-optimize' ),
 				),
 				array(
 					'id' 			=> 'password_field',
-					'label'			=> __( 'A Password' , 'simple-event-organizer' ),
-					'description'	=> __( 'This is a standard password field.', 'simple-event-organizer' ),
+					'label'			=> __( 'A Password' , 'pagespeed-site-optimize' ),
+					'description'	=> __( 'This is a standard password field.', 'pagespeed-site-optimize' ),
 					'type'			=> 'password',
 					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text', 'simple-event-organizer' ),
+					'placeholder'	=> __( 'Placeholder text', 'pagespeed-site-optimize' ),
 				),
 				array(
 					'id' 			=> 'secret_text_field',
-					'label'			=> __( 'Some Secret Text' , 'simple-event-organizer' ),
-					'description'	=> __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', 'simple-event-organizer' ),
+					'label'			=> __( 'Some Secret Text' , 'pagespeed-site-optimize' ),
+					'description'	=> __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', 'pagespeed-site-optimize' ),
 					'type'			=> 'text_secret',
 					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text', 'simple-event-organizer' ),
+					'placeholder'	=> __( 'Placeholder text', 'pagespeed-site-optimize' ),
 				),
 				array(
 					'id' 			=> 'text_block',
-					'label'			=> __( 'A Text Block' , 'simple-event-organizer' ),
-					'description'	=> __( 'This is a standard text area.', 'simple-event-organizer' ),
+					'label'			=> __( 'A Text Block' , 'pagespeed-site-optimize' ),
+					'description'	=> __( 'This is a standard text area.', 'pagespeed-site-optimize' ),
 					'type'			=> 'textarea',
 					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text for this textarea', 'simple-event-organizer' ),
+					'placeholder'	=> __( 'Placeholder text for this textarea', 'pagespeed-site-optimize' ),
 				),
 				array(
 					'id' 			=> 'single_checkbox',
-					'label'			=> __( 'An Option', 'simple-event-organizer' ),
-					'description'	=> __( 'A standard checkbox - if you save this option as checked then it will store the option as \'on\', otherwise it will be an empty string.', 'simple-event-organizer' ),
+					'label'			=> __( 'An Option', 'pagespeed-site-optimize' ),
+					'description'	=> __( 'A standard checkbox - if you save this option as checked then it will store the option as \'on\', otherwise it will be an empty string.', 'pagespeed-site-optimize' ),
 					'type'			=> 'checkbox',
 					'default'		=> '',
 				),
 				array(
 					'id' 			=> 'select_box',
-					'label'			=> __( 'A Select Box', 'simple-event-organizer' ),
-					'description'	=> __( 'A standard select box.', 'simple-event-organizer' ),
+					'label'			=> __( 'A Select Box', 'pagespeed-site-optimize' ),
+					'description'	=> __( 'A standard select box.', 'pagespeed-site-optimize' ),
 					'type'			=> 'select',
 					'options'		=> array( 'drupal' => 'Drupal', 'joomla' => 'Joomla', 'wordpress' => 'WordPress' ),
 					'default'		=> 'wordpress',
 				),
 				array(
 					'id' 			=> 'radio_buttons',
-					'label'			=> __( 'Some Options', 'simple-event-organizer' ),
-					'description'	=> __( 'A standard set of radio buttons.', 'simple-event-organizer' ),
+					'label'			=> __( 'Some Options', 'pagespeed-site-optimize' ),
+					'description'	=> __( 'A standard set of radio buttons.', 'pagespeed-site-optimize' ),
 					'type'			=> 'radio',
 					'options'		=> array( 'superman' => 'Superman', 'batman' => 'Batman', 'ironman' => 'Iron Man' ),
 					'default'		=> 'batman',
 				),
 				array(
 					'id' 			=> 'multiple_checkboxes',
-					'label'			=> __( 'Some Items', 'simple-event-organizer' ),
-					'description'	=> __( 'You can select multiple items and they will be stored as an array.', 'simple-event-organizer' ),
+					'label'			=> __( 'Some Items', 'pagespeed-site-optimize' ),
+					'description'	=> __( 'You can select multiple items and they will be stored as an array.', 'pagespeed-site-optimize' ),
 					'type'			=> 'checkbox_multi',
 					'options'		=> array( 'square' => 'Square', 'circle' => 'Circle', 'rectangle' => 'Rectangle', 'triangle' => 'Triangle' ),
 					'default'		=> array( 'circle', 'triangle' ),
@@ -212,36 +212,36 @@ class Simple_Event_Organizer_Settings {
 		);
 
 		$settings['extra'] = array(
-			'title'					=> __( 'Extra', 'simple-event-organizer' ),
-			'description'			=> __( 'These are some extra input fields that maybe aren\'t as common as the others.', 'simple-event-organizer' ),
+			'title'					=> __( 'Extra', 'pagespeed-site-optimize' ),
+			'description'			=> __( 'These are some extra input fields that maybe aren\'t as common as the others.', 'pagespeed-site-optimize' ),
 			'fields'				=> array(
 				array(
 					'id' 			=> 'number_field',
-					'label'			=> __( 'A Number' , 'simple-event-organizer' ),
-					'description'	=> __( 'This is a standard number field - if this field contains anything other than numbers then the form will not be submitted.', 'simple-event-organizer' ),
+					'label'			=> __( 'A Number' , 'pagespeed-site-optimize' ),
+					'description'	=> __( 'This is a standard number field - if this field contains anything other than numbers then the form will not be submitted.', 'pagespeed-site-optimize' ),
 					'type'			=> 'number',
 					'default'		=> '',
-					'placeholder'	=> __( '42', 'simple-event-organizer' ),
+					'placeholder'	=> __( '42', 'pagespeed-site-optimize' ),
 				),
 				array(
 					'id' 			=> 'colour_picker',
-					'label'			=> __( 'Pick a colour', 'simple-event-organizer' ),
-					'description'	=> __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'simple-event-organizer' ),
+					'label'			=> __( 'Pick a colour', 'pagespeed-site-optimize' ),
+					'description'	=> __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'pagespeed-site-optimize' ),
 					'type'			=> 'color',
 					'default'		=> '#21759B',
 				),
 				array(
 					'id' 			=> 'an_image',
-					'label'			=> __( 'An Image' , 'simple-event-organizer' ),
-					'description'	=> __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', 'simple-event-organizer' ),
+					'label'			=> __( 'An Image' , 'pagespeed-site-optimize' ),
+					'description'	=> __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', 'pagespeed-site-optimize' ),
 					'type'			=> 'image',
 					'default'		=> '',
 					'placeholder'	=> '',
 				),
 				array(
 					'id' 			=> 'multi_select_box',
-					'label'			=> __( 'A Multi-Select Box', 'simple-event-organizer' ),
-					'description'	=> __( 'A standard multi-select box - the saved data is stored as an array.', 'simple-event-organizer' ),
+					'label'			=> __( 'A Multi-Select Box', 'pagespeed-site-optimize' ),
+					'description'	=> __( 'A standard multi-select box - the saved data is stored as an array.', 'pagespeed-site-optimize' ),
 					'type'			=> 'select_multi',
 					'options'		=> array( 'linux' => 'Linux', 'mac' => 'Mac', 'windows' => 'Windows' ),
 					'default'		=> array( 'linux' ),
@@ -324,7 +324,7 @@ class Simple_Event_Organizer_Settings {
 
 		// Build page HTML.
 		$html = '<div class="wrap" id="' . $this->parent->_token . '_settings">' . "\n";
-		$html .= '<h2>' . __( 'Simple Event Organizer Settings' , 'simple-event-organizer' ) . '</h2>' . "\n";
+		$html .= '<h2>' . __( 'Pagespeed Site Optimize Settings' , 'pagespeed-site-optimize' ) . '</h2>' . "\n";
 
 		$tab = '';
 		if ( isset( $_GET['tab'] ) && $_GET['tab'] ) { // @codingStandardsIgnoreLine
@@ -374,7 +374,7 @@ class Simple_Event_Organizer_Settings {
 				$html .= ob_get_clean();
 				$html .= '<p class="submit">' . "\n";
 					$html .= '<input type="hidden" name="tab" value="' . esc_attr( $tab ) . '" />' . "\n";
-					$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings' , 'simple-event-organizer' ) ) . '" />' . "\n";
+					$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings' , 'pagespeed-site-optimize' ) ) . '" />' . "\n";
 				$html .= '</p>' . "\n";
 			$html .= '</form>' . "\n";
 		$html .= '</div>' . "\n";
@@ -383,15 +383,15 @@ class Simple_Event_Organizer_Settings {
 	}
 
 	/**
-	 * Main Simple_Event_Organizer_Settings Instance.
+	 * Main Pagespeed_Site_Optimize_Settings Instance.
 	 *
-	 * Ensures only one instance of Simple_Event_Organizer_Settings is loaded or can be loaded.
+	 * Ensures only one instance of Pagespeed_Site_Optimize_Settings is loaded or can be loaded.
 	 *
 	 * @since 1.0.0
 	 * @static
-	 * @see Simple_Event_Organizer()
+	 * @see Pagespeed_Site_Optimize()
 	 * @param object $parent Contains the parent instance.
-	 * @return Main Simple_Event_Organizer_Settings instance
+	 * @return Main Pagespeed_Site_Optimize_Settings instance
 	 */
 	public static function instance( $parent ) {
 		if ( is_null( self::$_instance ) ) {
@@ -406,7 +406,7 @@ class Simple_Event_Organizer_Settings {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'simple-event-organizer' ), esc_html( $this->parent->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'pagespeed-site-optimize' ), esc_html( $this->parent->_version ) );
 	} // End __clone()
 
 	/**
@@ -415,7 +415,7 @@ class Simple_Event_Organizer_Settings {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'simple-event-organizer' ), esc_html( $this->parent->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'pagespeed-site-optimize' ), esc_html( $this->parent->_version ) );
 	} // End __wakeup()
 
 }

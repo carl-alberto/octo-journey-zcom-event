@@ -1,4 +1,4 @@
-=== Simple Event Organizer ===
+=== Event Organizer Tools ===
 Contributors: carl-alberto
 Donate link: https://carl.alber2.com/
 Tags: wordpress, plugin, template
@@ -16,7 +16,7 @@ This is where you can give a much longer description of your plugin that you can
 
 == Installation ==
 
-Installing "Simple Event Organizer" can be done either by searching for "Simple Event Organizer" via the "Plugins > Add New" screen in your WordPress dashboard, or by using the following steps:
+Installing "Event Organizer Tools" can be done either by searching for "Event Organizer Tools" via the "Plugins > Add New" screen in your WordPress dashboard, or by using the following steps:
 
 1. Download the plugin via WordPress.org
 2. Upload the ZIP file through the 'Plugins > Add New > Upload' screen in your WordPress dashboard

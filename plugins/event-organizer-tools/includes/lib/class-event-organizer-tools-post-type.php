@@ -2,7 +2,7 @@
 /**
  * Contains helper class for the post type.
  *
- * @package Simple Event Organizer \ Post Type
+ * @package Event Organizer Tools \ Post Type
  * @author Carl Alberto
  * @since 1.0.0
  */
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main helper class in creating Custom Post types.
  */
-class Simple_Event_Organizer_Post_Type {
+class Event_Organizer_Tools_Post_Type {
 
 	/**
 	 * The name for the custom post type.
@@ -117,16 +117,16 @@ class Simple_Event_Organizer_Post_Type {
 			'add_new' => _x(
 				'Add New',
 				'Add new post type',
-				'simple-event-organizer'
+				'event-organizer-tools'
 			),
-			'add_new_item' => sprintf( __( 'Add New %s' , 'simple-event-organizer' ), $this->single ),
-			'edit_item' => sprintf( __( 'Edit %s' , 'simple-event-organizer' ), $this->single ),
-			'new_item' => sprintf( __( 'New %s' , 'simple-event-organizer' ), $this->single ),
-			'all_items' => sprintf( __( 'All %s' , 'simple-event-organizer' ), $this->plural ),
-			'view_item' => sprintf( __( 'View %s' , 'simple-event-organizer' ), $this->single ),
-			'search_items' => sprintf( __( 'Search %s' , 'simple-event-organizer' ), $this->plural ),
-			'not_found' => sprintf( __( 'No %s Found' , 'simple-event-organizer' ), $this->plural ),
-			'not_found_in_trash' => sprintf( __( 'No %s Found In Trash' , 'simple-event-organizer' ), $this->plural ),
+			'add_new_item' => sprintf( __( 'Add New %s' , 'event-organizer-tools' ), $this->single ),
+			'edit_item' => sprintf( __( 'Edit %s' , 'event-organizer-tools' ), $this->single ),
+			'new_item' => sprintf( __( 'New %s' , 'event-organizer-tools' ), $this->single ),
+			'all_items' => sprintf( __( 'All %s' , 'event-organizer-tools' ), $this->plural ),
+			'view_item' => sprintf( __( 'View %s' , 'event-organizer-tools' ), $this->single ),
+			'search_items' => sprintf( __( 'Search %s' , 'event-organizer-tools' ), $this->plural ),
+			'not_found' => sprintf( __( 'No %s Found' , 'event-organizer-tools' ), $this->plural ),
+			'not_found_in_trash' => sprintf( __( 'No %s Found In Trash' , 'event-organizer-tools' ), $this->plural ),
 			'parent_item_colon' => sprintf( __( 'Parent %s' ), $this->single ),
 			'menu_name' => $this->plural,
 		);
@@ -170,16 +170,16 @@ class Simple_Event_Organizer_Post_Type {
 
 		$messages[ $this->post_type ] = array(
 		    0 => '',
-		    1 => sprintf( __( '%1$s updated. %2$sView %3$s%4$s.' , 'simple-event-organizer' ), $this->single, '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">', $this->single, '</a>' ),
-		    2 => __( 'Custom field updated.' , 'simple-event-organizer' ),
-		    3 => __( 'Custom field deleted.' , 'simple-event-organizer' ),
-		    4 => sprintf( __( '%1$s updated.' , 'simple-event-organizer' ), $this->single ),
-		    5 => isset( $_GET['revision'] ) ? sprintf( __( '%1$s restored to revision from %2$s.' , 'simple-event-organizer' ), $this->single, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-		    6 => sprintf( __( '%1$s published. %2$sView %3$s%4s.' , 'simple-event-organizer' ), $this->single, '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">', $this->single, '</a>' ),
-		    7 => sprintf( __( '%1$s saved.' , 'simple-event-organizer' ), $this->single ),
-		    8 => sprintf( __( '%1$s submitted. %2$sPreview post%3$s%4$s.' , 'simple-event-organizer' ), $this->single, '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', $this->single, '</a>' ),
-		    9 => sprintf( __( '%1$s scheduled for: %2$s. %3$sPreview %4$s%5$s.' , 'simple-event-organizer' ), $this->single, '<strong>' . date_i18n( __( 'M j, Y @ G:i' , 'simple-event-organizer' ), strtotime( $post->post_date ) ) . '</strong>', '<a target="_blank" href="' . esc_url( get_permalink( $post->ID ) ) . '">', $this->single, '</a>' ),
-		    10 => sprintf( __( '%1$s draft updated. %2$sPreview %3$s%4$s.' , 'simple-event-organizer' ), $this->single, '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', $this->single, '</a>' ),
+		    1 => sprintf( __( '%1$s updated. %2$sView %3$s%4$s.' , 'event-organizer-tools' ), $this->single, '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">', $this->single, '</a>' ),
+		    2 => __( 'Custom field updated.' , 'event-organizer-tools' ),
+		    3 => __( 'Custom field deleted.' , 'event-organizer-tools' ),
+		    4 => sprintf( __( '%1$s updated.' , 'event-organizer-tools' ), $this->single ),
+		    5 => isset( $_GET['revision'] ) ? sprintf( __( '%1$s restored to revision from %2$s.' , 'event-organizer-tools' ), $this->single, wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+		    6 => sprintf( __( '%1$s published. %2$sView %3$s%4s.' , 'event-organizer-tools' ), $this->single, '<a href="' . esc_url( get_permalink( $post->ID ) ) . '">', $this->single, '</a>' ),
+		    7 => sprintf( __( '%1$s saved.' , 'event-organizer-tools' ), $this->single ),
+		    8 => sprintf( __( '%1$s submitted. %2$sPreview post%3$s%4$s.' , 'event-organizer-tools' ), $this->single, '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', $this->single, '</a>' ),
+		    9 => sprintf( __( '%1$s scheduled for: %2$s. %3$sPreview %4$s%5$s.' , 'event-organizer-tools' ), $this->single, '<strong>' . date_i18n( __( 'M j, Y @ G:i' , 'event-organizer-tools' ), strtotime( $post->post_date ) ) . '</strong>', '<a target="_blank" href="' . esc_url( get_permalink( $post->ID ) ) . '">', $this->single, '</a>' ),
+		    10 => sprintf( __( '%1$s draft updated. %2$sPreview %3$s%4$s.' , 'event-organizer-tools' ), $this->single, '<a target="_blank" href="' . esc_url( add_query_arg( 'preview', 'true', get_permalink( $post->ID ) ) ) . '">', $this->single, '</a>' ),
 		);
 
 		return $messages;
@@ -195,11 +195,11 @@ class Simple_Event_Organizer_Post_Type {
 	public function bulk_updated_messages( $bulk_messages = array(), $bulk_counts = array() ) {
 
 		$bulk_messages[ $this->post_type ] = array(
-	        'updated'   => sprintf( _n( '%1$s %2$s updated.', '%1$s %3$s updated.', $bulk_counts['updated'], 'simple-event-organizer' ), $bulk_counts['updated'], $this->single, $this->plural ),
-	        'locked'    => sprintf( _n( '%1$s %2$s not updated, somebody is editing it.', '%1$s %3$s not updated, somebody is editing them.', $bulk_counts['locked'], 'simple-event-organizer' ), $bulk_counts['locked'], $this->single, $this->plural ),
-	        'deleted'   => sprintf( _n( '%1$s %2$s permanently deleted.', '%1$s %3$s permanently deleted.', $bulk_counts['deleted'], 'simple-event-organizer' ), $bulk_counts['deleted'], $this->single, $this->plural ),
-	        'trashed'   => sprintf( _n( '%1$s %2$s moved to the Trash.', '%1$s %3$s moved to the Trash.', $bulk_counts['trashed'], 'simple-event-organizer' ), $bulk_counts['trashed'], $this->single, $this->plural ),
-	        'untrashed' => sprintf( _n( '%1$s %2$s restored from the Trash.', '%1$s %3$s restored from the Trash.', $bulk_counts['untrashed'], 'simple-event-organizer' ), $bulk_counts['untrashed'], $this->single, $this->plural ),
+	        'updated'   => sprintf( _n( '%1$s %2$s updated.', '%1$s %3$s updated.', $bulk_counts['updated'], 'event-organizer-tools' ), $bulk_counts['updated'], $this->single, $this->plural ),
+	        'locked'    => sprintf( _n( '%1$s %2$s not updated, somebody is editing it.', '%1$s %3$s not updated, somebody is editing them.', $bulk_counts['locked'], 'event-organizer-tools' ), $bulk_counts['locked'], $this->single, $this->plural ),
+	        'deleted'   => sprintf( _n( '%1$s %2$s permanently deleted.', '%1$s %3$s permanently deleted.', $bulk_counts['deleted'], 'event-organizer-tools' ), $bulk_counts['deleted'], $this->single, $this->plural ),
+	        'trashed'   => sprintf( _n( '%1$s %2$s moved to the Trash.', '%1$s %3$s moved to the Trash.', $bulk_counts['trashed'], 'event-organizer-tools' ), $bulk_counts['trashed'], $this->single, $this->plural ),
+	        'untrashed' => sprintf( _n( '%1$s %2$s restored from the Trash.', '%1$s %3$s restored from the Trash.', $bulk_counts['untrashed'], 'event-organizer-tools' ), $bulk_counts['untrashed'], $this->single, $this->plural ),
 	    );
 
 	    return $bulk_messages;

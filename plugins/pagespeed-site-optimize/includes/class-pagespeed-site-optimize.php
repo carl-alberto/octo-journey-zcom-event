@@ -2,7 +2,7 @@
 /**
  * Contains class for the plugin.
  *
- * @package Simple Event Organizer \ Main
+ * @package Pagespeed Site Optimize \ Main
  * @author Carl Alberto
  * @since 1.0.0
  */
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class used for the main plugin functions.
  */
-class Simple_Event_Organizer {
+class Pagespeed_Site_Optimize {
 
 	/**
 	 * Constructor function.
@@ -28,7 +28,7 @@ class Simple_Event_Organizer {
 	 */
 	public function __construct( $file = '', $version = '1.0.0', $pluginoptions = array() ) {
 		$this->_version = $version;
-		$this->_token = 'simple_event_organizer';
+		$this->_token = 'pagespeed_site_optimize';
 		$this->base = $pluginoptions['settings_prefix'];
 
 		// Load plugin environment variables.
@@ -53,10 +53,10 @@ class Simple_Event_Organizer {
 
 		// Load API for generic admin functions.
 		if ( is_admin() ) {
-			$this->admin = new Simple_Event_Organizer_Admin_API();
+			$this->admin = new Pagespeed_Site_Optimize_Admin_API();
 		}
 // @codingStandardsIgnoreFile
-//		$custom = new Simple_Event_Organizer_Main;
+//		$custom = new Pagespeed_Site_Optimize_Main;
 //		$custom->register_taxonomy1();
 //		$custom->register_cpt1();
 
@@ -66,7 +66,7 @@ class Simple_Event_Organizer {
 	} // End __construct ()
 
 	/**
-	 * The single instance of Simple_Event_Organizer.
+	 * The single instance of Pagespeed_Site_Optimize.
 	 *
 	 * @var 	object
 	 * @access  private
@@ -213,7 +213,7 @@ class Simple_Event_Organizer {
 	 * @return  void
 	 */
 	public function load_localisation() {
-		load_plugin_textdomain( 'simple-event-organizer', false, dirname( plugin_basename( $this->file ) ) . '/languages/' );
+		load_plugin_textdomain( 'pagespeed-site-optimize', false, dirname( plugin_basename( $this->file ) ) . '/languages/' );
 	} // End load_localisation ()
 
 	/**
@@ -224,7 +224,7 @@ class Simple_Event_Organizer {
 	 * @return  void
 	 */
 	public function load_plugin_textdomain() {
-	    $domain = 'simple-event-organizer';
+	    $domain = 'pagespeed-site-optimize';
 
 	    $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 
@@ -233,17 +233,17 @@ class Simple_Event_Organizer {
 	} // End load_plugin_textdomain ()
 
 	/**
-	 * Main Simple_Event_Organizer Instance.
+	 * Main Pagespeed_Site_Optimize Instance.
 	 *
-	 * Ensures only one instance of Simple_Event_Organizer is loaded or can be loaded.
+	 * Ensures only one instance of Pagespeed_Site_Optimize is loaded or can be loaded.
 	 *
 	 * @since 1.0.0
 	 * @static
-	 * @see Simple_Event_Organizer()
+	 * @see Pagespeed_Site_Optimize()
 	 * @param string $file Name of this file.
 	 * @param string $version Version of this plugin.
 	 * @param array  $pluginoptions Contains various options for the plugin.
-	 * @return Main Simple_Event_Organizer instance
+	 * @return Main Pagespeed_Site_Optimize instance
 	 */
 	public static function instance( $file = '', $version = '1.0.0', $pluginoptions = array() ) {
 		if ( is_null( self::$_instance ) ) {
@@ -258,7 +258,7 @@ class Simple_Event_Organizer {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'simple-event-organizer' ), esc_html( $this->parent->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'pagespeed-site-optimize' ), esc_html( $this->parent->_version ) );
 	} // End __clone ()
 
 	/**
@@ -267,7 +267,7 @@ class Simple_Event_Organizer {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'simple-event-organizer' ), esc_html( $this->parent->_version ) );
+		_doing_it_wrong( __FUNCTION__, esc_html_e( 'Cheatin&#8217; huh?', 'pagespeed-site-optimize' ), esc_html( $this->parent->_version ) );
 	} // End __wakeup ()
 
 	/**

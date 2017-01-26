@@ -2,7 +2,7 @@
 /**
  * Contains class for the plugin Admin API.
  *
- * @package Simple Event Organizer \ Admin API
+ * @package Event Organizer Tools \ Admin API
  * @author Carl Alberto
  * @since 1.0.0
  */
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class used for the Admin API
  */
-class Simple_Event_Organizer_Admin_API {
+class Event_Organizer_Tools_Admin_API {
 
 	/**
 	 * Constructor function
@@ -165,8 +165,8 @@ class Simple_Event_Organizer_Admin_API {
 					$image_thumb = wp_get_attachment_thumb_url( $data );
 				}
 				$html .= '<img id="' . $option_name . '_preview" class="image_preview" src="' . $image_thumb . '" /><br/>' . "\n";
-				$html .= '<input id="' . $option_name . '_button" type="button" data-uploader_title="' . __( 'Upload an image' , 'simple-event-organizer' ) . '" data-uploader_button_text="' . __( 'Use image' , 'simple-event-organizer' ) . '" class="image_upload_button button" value="' . __( 'Upload new image' , 'simple-event-organizer' ) . '" />' . "\n";
-				$html .= '<input id="' . $option_name . '_delete" type="button" class="image_delete_button button" value="' . __( 'Remove image' , 'simple-event-organizer' ) . '" />' . "\n";
+				$html .= '<input id="' . $option_name . '_button" type="button" data-uploader_title="' . __( 'Upload an image' , 'event-organizer-tools' ) . '" data-uploader_button_text="' . __( 'Use image' , 'event-organizer-tools' ) . '" class="image_upload_button button" value="' . __( 'Upload new image' , 'event-organizer-tools' ) . '" />' . "\n";
+				$html .= '<input id="' . $option_name . '_delete" type="button" class="image_delete_button button" value="' . __( 'Remove image' , 'event-organizer-tools' ) . '" />' . "\n";
 				$html .= '<input id="' . $option_name . '" class="image_data_field" type="hidden" name="' . $option_name . '" value="' . $data . '"/><br/>' . "\n";
 			break;
 

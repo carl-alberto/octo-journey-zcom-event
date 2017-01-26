@@ -2,7 +2,7 @@
 /**
  * Contains the mian functionalities, customization will mainly happen here.
  *
- * @package Simple Event Organizer \ Main Functionalities
+ * @package Pagespeed Site Optimize \ Main Functionalities
  * @author Carl Alberto
  * @since 1.0.0
  */
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Class used for the main plugin functions.
  */
-class Simple_Event_Organizer_Main {
+class Pagespeed_Site_Optimize_Main {
 	/**
 	 * TODO: chnage function name and fill in blanks.
 	 * For Dashicons, see https://developer.wordpress.org/resource/dashicons
@@ -95,7 +95,7 @@ class Simple_Event_Organizer_Main {
 		if ( ! $post_type || ! $plural || ! $single ) {
 			return;
 		}
-		$post_type = new Simple_Event_Organizer_Post_Type( $post_type, $plural, $single, $description, $options );
+		$post_type = new Pagespeed_Site_Optimize_Post_Type( $post_type, $plural, $single, $description, $options );
 
 		return $post_type;
 	}
@@ -115,7 +115,7 @@ class Simple_Event_Organizer_Main {
 		if ( ! $taxonomy || ! $plural || ! $single ) {
 			return;
 		}
-		$taxonomy = new Simple_Event_Organizer_Taxonomy( $taxonomy, $plural, $single, $post_types, $taxonomy_args );
+		$taxonomy = new Pagespeed_Site_Optimize_Taxonomy( $taxonomy, $plural, $single, $post_types, $taxonomy_args );
 
 		return $taxonomy;
 	}

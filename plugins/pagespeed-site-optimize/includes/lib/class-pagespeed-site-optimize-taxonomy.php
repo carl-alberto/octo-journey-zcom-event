@@ -2,7 +2,7 @@
 /**
  * Contains class for the taxonomy.
  *
- * @package Simple Event Organizer \ Taxonomy
+ * @package Pagespeed Site Optimize \ Taxonomy
  * @author Carl Alberto
  * @since 1.0.0
  */
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Main taxonomy class.
  */
-class Simple_Event_Organizer_Taxonomy {
+class Pagespeed_Site_Optimize_Taxonomy {
 
 	/**
 	 * The name for the taxonomy.
@@ -100,20 +100,20 @@ class Simple_Event_Organizer_Taxonomy {
 			'name' => $this->plural,
 			'singular_name' => $this->single,
 			'menu_name' => $this->plural,
-			'all_items' => sprintf( __( 'All %s' , 'simple-event-organizer' ), $this->plural ),
-			'edit_item' => sprintf( __( 'Edit %s' , 'simple-event-organizer' ), $this->single ),
-			'view_item' => sprintf( __( 'View %s' , 'simple-event-organizer' ), $this->single ),
-			'update_item' => sprintf( __( 'Update %s' , 'simple-event-organizer' ), $this->single ),
-			'add_new_item' => sprintf( __( 'Add New %s' , 'simple-event-organizer' ), $this->single ),
-			'new_item_name' => sprintf( __( 'New %s Name' , 'simple-event-organizer' ), $this->single ),
-			'parent_item' => sprintf( __( 'Parent %s' , 'simple-event-organizer' ), $this->single ),
-			'parent_item_colon' => sprintf( __( 'Parent %s:' , 'simple-event-organizer' ), $this->single ),
-			'search_items' => sprintf( __( 'Search %s' , 'simple-event-organizer' ), $this->plural ),
-			'popular_items' => sprintf( __( 'Popular %s' , 'simple-event-organizer' ), $this->plural ),
-			'separate_items_with_commas' => sprintf( __( 'Separate %s with commas' , 'simple-event-organizer' ), $this->plural ),
-			'add_or_remove_items' => sprintf( __( 'Add or remove %s' , 'simple-event-organizer' ), $this->plural ),
-			'choose_from_most_used' => sprintf( __( 'Choose from the most used %s' , 'simple-event-organizer' ), $this->plural ),
-			'not_found' => sprintf( __( 'No %s found' , 'simple-event-organizer' ), $this->plural ),
+			'all_items' => sprintf( __( 'All %s' , 'pagespeed-site-optimize' ), $this->plural ),
+			'edit_item' => sprintf( __( 'Edit %s' , 'pagespeed-site-optimize' ), $this->single ),
+			'view_item' => sprintf( __( 'View %s' , 'pagespeed-site-optimize' ), $this->single ),
+			'update_item' => sprintf( __( 'Update %s' , 'pagespeed-site-optimize' ), $this->single ),
+			'add_new_item' => sprintf( __( 'Add New %s' , 'pagespeed-site-optimize' ), $this->single ),
+			'new_item_name' => sprintf( __( 'New %s Name' , 'pagespeed-site-optimize' ), $this->single ),
+			'parent_item' => sprintf( __( 'Parent %s' , 'pagespeed-site-optimize' ), $this->single ),
+			'parent_item_colon' => sprintf( __( 'Parent %s:' , 'pagespeed-site-optimize' ), $this->single ),
+			'search_items' => sprintf( __( 'Search %s' , 'pagespeed-site-optimize' ), $this->plural ),
+			'popular_items' => sprintf( __( 'Popular %s' , 'pagespeed-site-optimize' ), $this->plural ),
+			'separate_items_with_commas' => sprintf( __( 'Separate %s with commas' , 'pagespeed-site-optimize' ), $this->plural ),
+			'add_or_remove_items' => sprintf( __( 'Add or remove %s' , 'pagespeed-site-optimize' ), $this->plural ),
+			'choose_from_most_used' => sprintf( __( 'Choose from the most used %s' , 'pagespeed-site-optimize' ), $this->plural ),
+			'not_found' => sprintf( __( 'No %s found' , 'pagespeed-site-optimize' ), $this->plural ),
 		);
 
 		$args = array(
